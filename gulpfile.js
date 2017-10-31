@@ -1,6 +1,7 @@
 // dependencies
 var gulp          = require('gulp'),
     imagemin      = require('gulp-imagemin'),
+    pngquant      = require('imagemin-pngquant'), //深度壓縮png
     uglify        = require('gulp-uglify'),
     sass          = require('gulp-sass'),
     concat        = require('gulp-concat'),
@@ -11,7 +12,6 @@ var gulp          = require('gulp'),
     plumber       = require('gulp-plumber'),
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('gulp-autoprefixer'),
-    pngquant      = require('imagemin-pngquant'), //深度壓縮png
     sourcemaps    = require('gulp-sourcemaps'), //來源地圖
     changed       = require('gulp-changed'),    //有修改過的文件才會變更
     gutil         = require('gulp-util'), //上顏色console.log
@@ -34,8 +34,8 @@ gulp.task('copyHtml', function(){
 // Optimize Images 優化圖片
 gulp.task('imageMin', function(){
   gulp.src('src/images/*')
-    .pipe(changed( public/images ))
     .pipe(plumber())
+    .pipe(changed('public/images'))
     .pipe(imagemin({
       progressive: true, //無損壓縮jpg圖
       use: [pngquant()] //深度壓縮PNG

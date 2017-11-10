@@ -1,0 +1,169 @@
+@font-face
+  font-family: 'fontello'
+  src: url('fontello.eot')
+  src: url('fontello.eot?#iefix') format('embedded-opentype')
+  src: url('fontello.woff') format('woff')
+  src: url('fontello.ttf') format('truetype')
+  src: url('fontello.svg#fontello') format('svg')
+  font-style: normal
+  font-weight: normal
+
+// --------------
+// 1. Varible      
+// 2. Basic        
+// 3. Helper       
+// 4. Header Menu
+// 5. Section Page 
+
+
+// Varible Setting
+
+$link: #2f2f2f
+$hover-link: #818181
+$focus-link: #999999
+$close-button: #bdc3c7
+$menu-link: #a5a5a5
+
+//  Basic Setting
+
+body
+  width: 100%
+  height: 100%
+  font-size: 15px
+  font-weight: 300
+  line-height: 1.7
+  background-color: #FFF
+*
+  box-sizing: border-box
+  &:after, &:before
+    @extend *
+  &:focus
+    outline: none
+ul
+  list-style: none
+a
+  text-decoration: none
+  color: $link
+  transition: ease .6s
+  &:hover
+    color: $hover-link
+    text-decoration: none
+  &:focus
+    outline: none
+    color: $focus-link
+    text-decoration: none
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+h1
+  font-size: 100%
+  margin: 0
+// Helper Setting
+.animate-time
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+
+
+.clearfix:after, .row:after
+  clear: both
+
+// Header Menu
+header
+    background-color: rgb(255, 255, 255)
+    border-bottom: 1px solid #f1f1f1
+    padding: 32px 0
+    position: fixed
+    width: 100%
+    z-index: 10
+    float: right
+    transition: all .5s
+    &.mini
+      padding: 0
+      border-bottom: 1px solid #eee
+      opacity: 0.9
+#logo
+  float: left
+  width: 200px
+// Filter //
+.filter-form
+  float: right
+  padding: 15px
+  label
+    display: inline-block
+    margin-left: 1em
+    padding: 0 0.25em
+    user-select: none
+    font-weight: bold
+    cursor: pointer
+    &.ui-state-focus
+      outline: 1px dotted
+    .ui-icon
+      background: url(../img/sprites.png) no-repeat 0 0
+      display: inline-block
+      height: 17px
+      margin-right: 0.5em
+      margin-top: 4px
+      width: 17px
+      vertical-align: top
+    &.ui-state-active .ui-icon
+      background-position: -20px 0
+.load-more
+  display: block
+  width: 100%
+  padding: 1em 0px
+  margin-bottom: 10px
+  margin-top: 10px
+  border: 1px solid rgb(230,230,230)
+  background: #fff
+// Menu Button
+
+
+
+// Section Page
+section
+  margin: auto
+  width: 950px
+  padding: 130px 10px 100px
+.gallery
+  margin: 0
+  padding: 0
+
+.gallery-item
+  margin-top: 10px
+  list-style: none
+  opacity: 1
+  a
+    display: block
+    overflow: hidden
+    position: relative
+    .caption
+      background-color: rgba(0,0,0,.6)
+      height: 100%
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+  &.isLoading
+    opacity: 0
+    transition: opacity .6s
+  .caption
+    display: none
+
+.ui-helper-hidden-accessible
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+
+#go-top
+  position: fixed
+  right: 30px
+  bottom: 20px
+  a
+    display: inline-block
+  i
+    font-size: 36px

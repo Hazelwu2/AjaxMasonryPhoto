@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax get data</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/colorbox.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <header id="header" role="banner">
+    <div class="container clearfix">
+      <div class="row">
+        <div id="logo">
+          <a href="#"><img src="img/hazel-logo.jpg" alt="logo"></a>
+        </div>
+        <form class="filter-form" id="gallery-filter">
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-all" value="all" checked>
+            <label for="filter-all">所有</label>
+          </span>
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-people" value="people">
+            <label for="filter-people">人</label>
+          </span>
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-animals" value="animals">
+            <label for="filter-animals">動物</label>
+          </span>
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-nature" value="nature">
+            <label for="filter-nature">自然</label>
+          </span>
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-plantes" value="plantes">
+            <label for="filter-plantes">花草</label>
+          </span>
+          <span class="form-item">
+            <input type="radio" name="filter" id="filter-architects" value="architects">
+            <label for="filter-architects">建築師</label>
+          </span>
+        </form>
+      </div>
+    </div>
+  </header>
+
+      <section class="page">
+          <div class="row">
+            <ul class="gallery" id="gallery"></ul>
+            <button class="load-more" id="load-more">載入更多</button>
+          </div>
+      </section>
+
+      <div id="go-top">
+        <a href="#header">
+          <i class="icon-up-open"></i>
+        </a>
+      </div>
+  <script src="js/vendor/modernizr.custom.min.js"></script>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+  <script src="js/vendor/masonry.pkgd.min.js"></script>
+  <script src="js/vendor/jquery.colorbox-min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

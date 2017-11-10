@@ -2,3 +2,4 @@ node_modules/
 .tmp
 public
 vendors
+prepros-6.config

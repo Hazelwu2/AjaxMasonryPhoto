@@ -30,7 +30,7 @@ $(function(){
         // initGallery      圖庫初始化
         // addItems(filter) 建立項目並插入文件
         // filterItems      項目篩選
-        $.getJSON('../data/content.json', initGallery);
+        $.getJSON('https://hazelwu2.github.io/AjaxMasonryPhoto/data/content.json', initGallery);
 
             function initGallery (data) {
                 // 儲存取得的json
